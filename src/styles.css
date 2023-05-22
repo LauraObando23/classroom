@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    --color-1: #f1ebeb;
+    --color-2: #5cceee;
+    --color-3: #1693a5;
+    --color-4: #9e9e9e;
+    --color-5: #000000;
+    --font-family: 'Poppins'; 
+    --animation: 200ms;
+}
+
+html,
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-1);
+    font-family: var(--font-family);
+}
+.navbar{
+    background-color: var(--color-3);
+    font-family: var(--font-family);
+}
+.out{
+    margin-right: 2%;
+    width: 10%;
+}
+.general{
+    font-family: var(--font-family);
+}

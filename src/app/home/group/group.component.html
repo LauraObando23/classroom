@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid">
+    <a class="navbar-brand">
+      <img src="https://cdn-icons-png.flaticon.com/512/807/807814.png" alt="Logo" width="50" height="44" class="d-inline-block align-text">
+      <span style="color: white; font-weight: bold; font-size: 130%;"> ClassRoom</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" routerLink="/start"><span style="color: white; font-size: 100%; margin:5px;"><i class="fa-solid fa-user-graduate"></i> Usuarios</span></a>
+        <a class="nav-link" routerLink="/group"><span style="color: white; font-size: 100%; margin:5px;"><i class="fa-solid fa-people-group"></i> Grupos</span></a>
+        <a class="nav-link" routerLink="/cursos"><span style="color: white; font-size: 100%; margin:5px;"><i class="fa-solid fa-book-bookmark"></i> Cursos</span></a>
+        <a class="nav-link" routerLink="/signIn"><span style="color: white; font-size: 100%; margin:5px;"><i class="fa-solid fa-person-circle-plus"></i> Crear usuario</span></a>
+        <a class="nav-link" routerLink="/centrof"><span style="color: white; font-size: 100%; margin:5px;"><i class="fa-solid fa-school-circle-check"></i> Crear centro</span></a>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-light out" (click)="logOut()" type="button">Cerrar</button>
+</nav>
+<div class="general">
+  <div class="row">
+    <div class="col">
+      <div class="form-group filter row">
+        <label for="floatingInputGrid">Buscar</label>
+        <input type="text" class="form-control" name="filterPost" placeholder="Search..." [(ngModel)]="filterPost"  [ngModelOptions]="{standalone:true}">
+      </div>
+    </div>
+  </div>
+
+  <div class="container data" id="htmlData">
+    <table class="table table-light mt-5 text-center" >
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">N° grupo</th>
+          <th scope="col">Curso</th>
+          <th scope="col">Alumno</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of listGrupo | filter:filterPost;">
+          <td>{{item.id_group}}</td>
+          <td>{{item.group}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.name_user}}</td>
+          <td>
+            <button routerLink="/editgroup/{{ item.id_group }}" type="button" class="btn btn-ac btn-sm">Actualizar</button>
+          </td>
+          <td>
+            <button (click)="deleteGroup(item.id_group)" type="button" class="btn btn-ac btn-sm" style="background-color: #F97777">X</button>
+          </td>
+        </tr>
+      </tbody>
+    </table> 
+  </div>
+</div>
+<button type="submit" class="btn btn-primary general" (click)="openPDF()">Generar reporte</button>
+

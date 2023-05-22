@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid">
+    <a class="navbar-brand">
+      <img src="https://cdn-icons-png.flaticon.com/512/807/807814.png" alt="Logo" width="50" height="44" class="d-inline-block align-text">
+      <span style="color: white; font-weight: bold; font-size: 130%;"> ClassRoom</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" routerLink="/start"><span style="color: white; font-size: 100%; margin:5px;"><i class="fa-solid fa-user-graduate"></i> Usuarios</span></a>
+        <a class="nav-link" routerLink="/group"><span style="color: white; font-size: 100%; margin:5px;"><i class="fa-solid fa-people-group"></i> Grupos</span></a>
+        <a class="nav-link" routerLink="/cursos"><span style="color: white; font-size: 100%; margin:5px;"><i class="fa-solid fa-book-bookmark"></i> Cursos</span></a>
+        <a class="nav-link" routerLink="/signIn"><span style="color: white; font-size: 100%; margin:5px;"><i class="fa-solid fa-person-circle-plus"></i> Crear usuario</span></a>
+        <a class="nav-link" routerLink="/centrof"><span style="color: white; font-size: 100%; margin:5px;"><i class="fa-solid fa-school-circle-check"></i> Crear centro</span></a>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-light out" (click)="logOut()" type="button">Cerrar</button>
+</nav>
+
+  <p class="general tit">Ingresa un nuevo centro de formación!</p>
+  <div class="card">
+    <div class="card-body">
+        <form >
+            <div class="mb-2">
+                <label for="inputName" class="form-label">Nombre centro</label>
+                <input type="text"  [(ngModel)]="centro" [ngModelOptions]="{standalone:true}" class="form-control">
+            </div>
+            <div class="mb-2">
+                <label for="inputCity" class="form-label">Dirección</label>
+                <input type="text" [(ngModel)]="direccion" [ngModelOptions]="{standalone:true}" class="form-control">
+            </div>
+            <div class="mb-2">
+                <label for="inputCity" class="form-label">Sede</label>
+                <input type="text" [(ngModel)]="sede" [ngModelOptions]="{standalone:true}" class="form-control">
+            </div>
+            <div class="mb-2">
+                <label for="inputCity" class="form-label">Número telefonico</label>
+                <input type="text" [(ngModel)]="numero_comunicacion" [ngModelOptions]="{standalone:true}" class="form-control">
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary" (click)="newCenter()">Registrar</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container data">
+    <table class="table table-light mt-5 text-center general" >
+      <thead>
+        <tr>
+          <th scope="col">Centro</th>
+          <th scope="col">Direccion</th>
+          <th scope="col">Sede</th>
+          <th scope="col">Numero</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of listCentro">
+          <td>{{item.centro}}</td>
+          <td>{{item.direccion}}</td>
+          <td>{{item.sede}}</td>
+          <td>{{item.numero_comunicacion}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

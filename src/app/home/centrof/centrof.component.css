@@ -1,0 +1,24 @@
+.tit{
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+    margin: 2%;
+}
+.card{
+    width: 30%; 
+    border: none;
+    background-color: rgb(235, 231, 231);
+    font-family: var(--font-family);
+    margin: auto;
+}
+.btn-primary{
+    border: none;
+    background-color: var(--color-2);
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    width: 40%;
+}
+.data{
+    background: #1693a5;
+}

@@ -1,0 +1,36 @@
+.tit{
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+    margin: 2%;
+    
+}
+.filter{
+    margin-top: 14px;
+    margin-left: 100px;
+}
+.btn-primary{
+    border: none;
+    background-color: var(--color-2);
+    font-weight: bold;
+    margin: auto;
+    margin-top: 2%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+.card{
+    width: 30%; 
+    border: none;
+    background-color: rgb(235, 231, 231);
+    font-family: var(--font-family);
+    margin: auto;
+}
+.data{
+    background: #1693a5;
+    width: 50%;
+}
+.table{
+    margin-top:5%;
+    width:100%;
+}

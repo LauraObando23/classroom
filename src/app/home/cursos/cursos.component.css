@@ -1,0 +1,12 @@
+.data{
+    background: #1693a5;
+}
+.btn-primary{
+    border: none;
+    background-color: var(--color-2);
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    width: 20%;
+    font-family: var(--font-family);
+}

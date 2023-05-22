@@ -1,0 +1,32 @@
+.abs-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh; 
+}
+.card{
+    width: 60%; 
+    font-family: var(--font-family);
+}
+.card-header{
+    background-color: var(--color-2);
+}
+.card-title{
+    text-align:center;
+    font-weight: bold; 
+    font-size: 160%;
+    color: white;
+    margin-top: 1%;
+}
+.btn-primary{
+    border: none;
+    background-color: var(--color-2);
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    width: 20%;
+    font-family: var(--font-family);
+}
+.img{
+    margin-right: 2%;
+}

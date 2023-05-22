@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <img src="https://cdn-icons-png.flaticon.com/512/807/807814.png" alt="Logo" width="50" height="44" class="d-inline-block align-text">
+        <span style="color: white; font-weight: bold; font-size: 130%;"> ClassRoom</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" routerLink="/start"><span style="color: white; font-size: 100%; margin:5px;"><i class="fa-solid fa-user-graduate"></i> Usuarios</span></a>
+          <a class="nav-link" routerLink="/group"><span style="color: white; font-size: 100%; margin:5px;"><i class="fa-solid fa-people-group"></i> Grupos</span></a>
+          <a class="nav-link" routerLink="/cursos"><span style="color: white; font-size: 100%; margin:5px;"><i class="fa-solid fa-book-bookmark"></i> Cursos</span></a>
+          <a class="nav-link" routerLink="/signIn"><span style="color: white; font-size: 100%; margin:5px;"><i class="fa-solid fa-person-circle-plus"></i> Crear usuario</span></a>
+          <a class="nav-link" routerLink="/centrof"><span style="color: white; font-size: 100%; margin:5px;"><i class="fa-solid fa-school-circle-check"></i> Crear centro</span></a>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-light out ms-auto" (click)="logOut()" type="button">Cerrar</button>
+  </nav>
+  <p class="general tit">Actualiza la información!</p>
+  <div class="general">
+    <div class="filter row">
+      <div class="input-group">
+        <form [formGroup]="form" class="row">
+          <div class="col-md form-group">
+            <label for="floatingInputGrid">Nombre usuario</label>
+            <input type="text" formControlName="name_user"  class="form-control" id="floatingInputGrid" >
+          </div>       
+          <div class="col-md form-group">
+            <label for="floatingInputGrid">Correo</label>
+            <input type="text" formControlName="email"  class="form-control" id="floatingInputGrid" >
+          </div> 
+          <div class="mb-2 form-group">
+            <label for="inputState" class="form-label">Tipo usuario</label>
+            <select id="inputState" formControlName="tipo_usuario"  class="form-control" class="form-select">
+              <option>Estudiante</option>
+              <option>Administrador</option>
+            </select>
+          </div>
+           <div class="col-md form-group">
+            <label for="floatingInputGrid">N° identificación</label>
+            <input type="text" formControlName="numero_idt" class="form-control" id="floatingInputGrid" >
+           </div>
+           <div class="col-md form-group">
+            <label for="floatingInputGrid">Contraseña</label>
+            <input type="text" formControlName="password" class="form-control" id="floatingInputGrid" >
+           </div>
+        </form>
+      </div>
+      <div class="col">
+        <button type="submit" class="btn btn-primary" (click)="updateUsers()">Actualizar</button>
+     </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <img src="https://cdn-icons-png.flaticon.com/512/807/807814.png" alt="Logo" width="50" height="44" class="d-inline-block align-text">
+        <span style="color: white; font-weight: bold; font-size: 130%;"> ClassRoom</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" routerLink="/start"><span style="color: white; font-size: 100%; margin:5px;"><i class="fa-solid fa-user-graduate"></i> Usuarios</span></a>
+          <a class="nav-link" routerLink="/group"><span style="color: white; font-size: 100%; margin:5px;"><i class="fa-solid fa-people-group"></i> Grupos</span></a>
+          <a class="nav-link" routerLink="/cursos"><span style="color: white; font-size: 100%; margin:5px;"><i class="fa-solid fa-book-bookmark"></i> Cursos</span></a>
+          <a class="nav-link" routerLink="/signIn"><span style="color: white; font-size: 100%; margin:5px;"><i class="fa-solid fa-person-circle-plus"></i> Crear usuario</span></a>
+          <a class="nav-link" routerLink="/centrof"><span style="color: white; font-size: 100%; margin:5px;"><i class="fa-solid fa-school-circle-check"></i> Crear centro</span></a>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-light out ms-auto" (click)="logOut()" type="button">Cerrar</button>
+  </nav>
+  <div class="container">
+    <div class="abs-center">
+      <div class="card ">
+          <div class="card-header">
+              <h5 class="card-title"><span><img src="assets/ficha.png" class="img" alt="Ficha" width="65" height="65"></span>FICHA DE USUARIO </h5>
+            </div>
+          <div class="card-body">
+            <form [formGroup]="form">
+                <div class="row g-2">
+                    <div class="col-md form-group">
+                        <div class="form-floating mb-3 info">
+                            <input type="text" formControlName="name_user" readonly class="form-control-plaintext">
+                            <label for="floatingPlaintextInput">Nombre</label>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="form-floating mb-3 form-group info">
+                            <input type="text" formControlName="numero_idt" readonly class="form-control-plaintext">
+                            <label for="floatingPlaintextInput">N° identificación</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-2">
+                    <div class="col-md">
+                        <div class="form-floating mb-3 form-group info">
+                            <input type="text" formControlName="email" readonly class="form-control-plaintext">
+                            <label for="floatingPlaintextInput">Correo</label>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="form-floating mb-3 form-group info">
+                            <input type="text" formControlName="tipo_usuario" readonly class="form-control-plaintext">
+                            <label for="floatingPlaintextInput">Tipo usuario</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary col-6" routerLink="/start" routerLinkActive="router-link-active" >Volver</button>
+            </form>
+          </div>
+        </div>
+    </div>
+  </div>
